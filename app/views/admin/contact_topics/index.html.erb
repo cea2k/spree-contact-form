@@ -13,27 +13,18 @@
 
 <table class="index">
   <tr>
-    <%= hook :admin_contact_topic_index_headers do %>
-      <th><%= t("name") %></th>
-      <th><%= t("emails") %></th>
-    <% end %>
-    <th>
-      <%= hook :admin_contact_topic_index_header_actions %>
-    </th>
+    <th><%= t("name") %></th>
+    <th><%= t("emails") %></th>
   </tr>
   <% @contact_topics.each do |topic| %>
     <tr id="<%= dom_id topic %>">
       <%- locals = {:topic => topic} %>
-      <%= hook :admin_contact_topics_index_rows, locals do %>
-        <td><%= topic.name %></td>
-        <td><%= topic.emails %></td>
-      <% end %>
+      <td><%= topic.name %></td>
+      <td><%= topic.emails %></td>
       <td class="actions">
-        <%= hook :admin_contact_topics_index_row_actions, locals do %>
-          <%= link_to_edit topic  %>
-          &nbsp;
-          <%= link_to_delete topic  %>
-        <% end %>
+        <%= link_to_edit topic  %>
+        &nbsp;
+        <%= link_to_delete topic  %>
       </td>
     </tr>
   <% end %>
