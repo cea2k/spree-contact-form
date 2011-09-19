@@ -6,9 +6,10 @@ es:
   message: Mensaje
   topic: Tema
   invalid_order_number: "El numero de orden debe comenzar con 'R' seguido de 9 números (e.g. R123123213)"
-  contact_thank_you: "¡Muchas Gracias! Su mensaje ha sido enviado exitosamente, nos pondremos en contacto con usted we will be contacting you shortly"
+  contact_thank_you: "¡Muchas Gracias! Su mensaje ha sido enviado exitosamente, en breve nos pondremos en contacto con usted."
   contact_topics: Temas de Contacto
   contact_topics_description: Configuracion de los temas para el formulario de contacto, seleccione a que direcciones de correo electrónico les sera enviado
   emails: Emails
-  new_contact_topic: Nuevo Tema de Concacto
+  new_contact_topic: Nuevo Tema de Contacto
+  editing_contact_topic: Editando Tema de Contacto
   comma_delimited: delimitados por coma

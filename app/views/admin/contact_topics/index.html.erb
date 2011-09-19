@@ -1,7 +1,9 @@
-<div class='toolbar'>
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<div class='toolbar' data-hook="toolbar">
   <ul class='actions'>
     <li id="new_contact_topic_link">
-      <%= button_link_to t("new_contact_topic"), new_object_url, {:remote => true, :icon => 'add', :id => 'admin_new_contact_topic'} %>
+      <%= button_link_to t("new_contact_topic"), new_object_url, {:icon => 'add', :id => 'admin_new_contact_topic'} %>
     </li>
   </ul>
   <br class='clear' />
@@ -9,12 +11,11 @@
 
 <h1><%= t("contact_topics")%></h1>
 
-<div id="new_contact_topic" data-hook></div>
-
 <table class="index">
   <tr>
     <th><%= t("name") %></th>
     <th><%= t("emails") %></th>
+    <th></th>
   </tr>
   <% @contact_topics.each do |topic| %>
     <tr id="<%= dom_id topic %>">

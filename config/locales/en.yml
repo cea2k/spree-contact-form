@@ -11,4 +11,5 @@ en:
   contact_topics_description: Setup topics for the contact form, choose which email address topics should be routed to
   emails: Emails
   new_contact_topic: New Contact Topic
+  editing_contact_topic: Editing Contact Topic
   comma_delimited: comma delimited

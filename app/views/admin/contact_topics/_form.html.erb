@@ -1,7 +1,5 @@
 <%- locals = {:f => f} %>
 
-<%= render "shared/error_messages", :target => f.object %>
-
 <%= f.field_container :name do %>
   <%= f.label :name, t("name") %> <span class="required">*</span><br />
   <%= f.text_field :name, :class => 'fullwidth title'  %>  
