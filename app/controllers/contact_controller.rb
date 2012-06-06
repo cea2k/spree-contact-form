@@ -9,10 +9,18 @@ class ContactController < Spree::BaseController
     @message = Message.new(params[:message] || {})
     if @message.save
       ContactMailer.message_email(@message).deliver
-      flash[:notice] = t('contact_thank_you')
-      redirect_to root_path
+      if params[:silent]
+        render :text => "OK"
+      else
+        flash[:notice] = t('contact_thank_you')
+        redirect_to root_path
+      end
     else
-      render :action => 'show'
+      if params[:silent]
+        render :text => "ERROR"
+      else
+        render :action => 'show'
+      end
     end
   end
 
